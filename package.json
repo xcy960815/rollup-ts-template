@@ -2,7 +2,7 @@
   "name": "rollup-ts-template",
   "version": "1.0.0",
   "description": "基于rollup 打包ts 库的模版",
-  "main": "index.ts",
+  "main": "dist/index.umd.js",
   "scripts": {
     "dev": "NODE_ENV=development ENV=daily rollup -c -w",
     "build": "NODE_ENV=production ENV=prod rollup -c"
