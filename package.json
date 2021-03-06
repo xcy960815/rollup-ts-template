@@ -6,7 +6,8 @@
     "module": "dist/index.umd.js",
     "scripts": {
         "dev": "NODE_ENV=development ENV=daily rollup -c -w",
-        "build": "NODE_ENV=production ENV=prod rollup -c"
+        "build": "NODE_ENV=production ENV=prod rollup -c",
+        "upload": "npm run build && npm publish"
     },
     "repository": {
         "type": "git",
