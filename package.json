@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "基于rollup 打包ts 库的模版",
     "main": "dist/index.umd.js",
-    "module": "dist/index.umd.js",
+    "module": "dist/index.esm.js",
     "scripts": {
         "dev": "NODE_ENV=development ENV=daily rollup -c -w",
         "build": "NODE_ENV=production ENV=prod rollup -c",
@@ -18,7 +18,7 @@
     "bugs": {
         "url": "https://github.com/ChongYu-Yease/rollup-ts-template/issues"
     },
-    "types": "./types/index.d.ts",
+    "types": "dist/typing/index.d.ts",
     "homepage": "https://github.com/ChongYu-Yease/rollup-ts-template#readme",
     "devDependencies": {
         "@babel/core": "^7.12.3",

@@ -21,10 +21,10 @@ export default {
             file: 'demo/index.umd.js',
             name: 'example',
         },
-        {
-            format: 'cjs',
-            file: 'dist/index.cjs.js',
-        },
+        // {
+        //     format: 'cjs',
+        //     file: 'dist/index.cjs.js',
+        // },
         {
             format: 'es',
             file: 'dist/index.esm.js',
@@ -56,7 +56,8 @@ export default {
         !isProduction && livereload(),
         typescript({
             exclude: 'node_modules/**',
-            typescript: require('typescript'),
+            useTsconfigDeclarationDir: true,
+            extensions: ['.js', '.ts', '.tsx'],
         }),
         sourceMaps(),
     ],

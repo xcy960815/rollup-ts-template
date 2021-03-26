@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "declaration": true, //自动生成 type 类型声明文件
+    "declarationDir": "dist/typing",
+    "strict": true,
+    "sourceMap": false,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  },
+  "exclude": [
+    "dist"
+  ]
+}
