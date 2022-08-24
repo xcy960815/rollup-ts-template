@@ -1,7 +1,6 @@
 interface StyleConfig {
     [key: string]: string
 }
-
 class Example {
     constructor() {
         const version: string = 'class Example is init'
