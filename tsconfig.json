@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "es2015",
     "declaration": true, //自动生成 type 类型声明文件
-    "declarationDir": "dist/typing",
+    "declarationDir": "./temp",
     "strict": true,
     "sourceMap": false,
     "noImplicitAny": false,
@@ -17,6 +17,10 @@
     ]
   },
   "exclude": [
-    "dist"
+    "dist",
+    "node_modules",
+  ],
+  "files": [
+    "src/index.ts",
   ]
 }

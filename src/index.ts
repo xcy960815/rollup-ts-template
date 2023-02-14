@@ -1,7 +1,7 @@
-interface StyleConfig {
+export interface IStyleConfig {
     [key: string]: string
 }
-class Example {
+export class Example {
     constructor() {
         const version: string = 'class Example is init'
         this.init(version)
@@ -15,7 +15,7 @@ class Example {
             return item.toUpperCase()
         })
     }
-    initPage(tagName: string, innerText: string, styleConfig: StyleConfig = {}) {
+    public initPage(tagName: string, innerText: string, styleConfig: IStyleConfig = {}) {
         const lable: HTMLElement = document.createElement(tagName)
 
         lable.innerText = innerText
@@ -48,4 +48,3 @@ class Example {
         document.body.append(lable)
     }
 }
-export { Example }
