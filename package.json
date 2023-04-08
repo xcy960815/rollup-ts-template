@@ -1,50 +1,57 @@
 {
-    "name": "rollup-ts-template",
-    "version": "1.0.0",
-    "description": "基于rollup 打包ts 库的模版",
-    "main": "dist/index.umd.js",
-    "module": "dist/index.esm.js",
-    "scripts": {
-        "dev": "NODE_ENV=development ENV=daily rollup -c -w",
-        "link": "npm link && npm link rollup-ts-template",
-        "build": "NODE_ENV=production ENV=prod rollup -c  && api-extractor run && rm -rf ./temp",
-        "serve": "vue-cli-service serve"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/xcy960815/rollup-ts-template.git"
-    },
-    "author": {
-        "name": "xcy960815",
-        "email": "18763006837@163.com"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/xcy960815/rollup-ts-template/issues"
-    },
-    "types": "typing/index.d.ts",
-    "homepage": "https://github.com/xcy960815/rollup-ts-template#readme",
-    "devDependencies": {
-        "@babel/core": "^7.12.3",
-        "@microsoft/api-extractor": "^7.28.3",
-        "@rollup/plugin-commonjs": "^16.0.0",
-        "@rollup/plugin-node-resolve": "^10.0.0",
-        "@vue/cli-plugin-typescript": "~5.0.0",
-        "@vue/cli-service": "~5.0.0",
-        "husky": "^1.3.1",
-        "less": "^4.0.0",
-        "less-loader": "^8.0.0",
-        "prettier": "^2.2.1",
-        "pretty-quick": "^1.8.0",
-        "rollup": "^2.33.1",
-        "rollup-plugin-babel": "^4.4.0",
-        "rollup-plugin-delete": "^2.0.0",
-        "rollup-plugin-livereload": "^2.0.0",
-        "rollup-plugin-sourcemaps": "^0.6.3",
-        "rollup-plugin-terser": "^7.0.2",
-        "rollup-plugin-typescript2": "^0.30.0",
-        "tslib": "^2.0.3",
-        "typescript": "~4.5.5",
-        "vue": "^2.6.14"
+  "name": "rollup-ts-template",
+  "version": "1.0.0",
+  "description": "基于rollup 打包ts 库的模版",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "dev": "NODE_ENV=development ENV=daily rollup -c -w",
+    "link": "npm link && npm link rollup-ts-template",
+    "build": "NODE_ENV=production ENV=prod rollup -c  && api-extractor run && rm -rf ./temp",
+    "serve": "vue-cli-service serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xcy960815/rollup-ts-template.git"
+  },
+  "author": {
+    "name": "xcy960815",
+    "email": "18763006837@163.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xcy960815/rollup-ts-template/issues"
+  },
+  "types": "typing/index.d.ts",
+  "homepage": "https://github.com/xcy960815/rollup-ts-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@microsoft/api-extractor": "^7.28.3",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "husky": "^1.3.1",
+    "less": "^4.0.0",
+    "less-loader": "^8.0.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^1.8.0",
+    "rollup": "^2.33.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.0.3",
+    "typescript": "~4.5.5",
+    "vcm-cli": "^1.0.5",
+    "vue": "^2.6.14"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "vcm"
     }
+  }
 }
